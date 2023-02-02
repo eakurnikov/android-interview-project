@@ -1,0 +1,52 @@
+biz/filmeroo/premier/BuildConfig.java
+ biz.filmeroo.premier.BuildConfig
+biz/filmeroo/premier/app/AppModule_ProvideAppContextFactory.java
+ biz.filmeroo.premier.app.AppModule_ProvideAppContextFactory
+biz/filmeroo/premier/app/AppModule_ProvideOkHttpClientFactory.java
+ biz.filmeroo.premier.app.AppModule_ProvideOkHttpClientFactory
+biz/filmeroo/premier/app/AppModule_ProvideResourceFactory.java
+ biz.filmeroo.premier.app.AppModule_ProvideResourceFactory
+biz/filmeroo/premier/app/AppModule_ProvideFilmServiceFactory.java
+ biz.filmeroo.premier.app.AppModule_ProvideFilmServiceFactory
+biz/filmeroo/premier/main/FilmRepository_Factory.java
+ biz.filmeroo.premier.main.FilmRepository_Factory
+biz/filmeroo/premier/main/SearchActivity_MembersInjector.java
+ biz.filmeroo.premier.main.SearchActivity_MembersInjector
+biz/filmeroo/premier/detail/FilmDetailPresenter_Factory.java
+ biz.filmeroo.premier.detail.FilmDetailPresenter_Factory
+biz/filmeroo/premier/app/Binder_MainActivity$app_debug.java
+ biz.filmeroo.premier.app.Binder_MainActivity$app_debug
+ biz.filmeroo.premier.app.Binder_MainActivity$app_debug$MainActivitySubcomponent
+ biz.filmeroo.premier.app.Binder_MainActivity$app_debug$MainActivitySubcomponent$Factory
+biz/filmeroo/premier/app/Binder_SearchActivity.java
+ biz.filmeroo.premier.app.Binder_SearchActivity
+ biz.filmeroo.premier.app.Binder_SearchActivity$SearchActivitySubcomponent
+ biz.filmeroo.premier.app.Binder_SearchActivity$SearchActivitySubcomponent$Factory
+biz/filmeroo/premier/detail/DetailActivity_MembersInjector.java
+ biz.filmeroo.premier.detail.DetailActivity_MembersInjector
+biz/filmeroo/premier/main/MainActivity_MembersInjector.java
+ biz.filmeroo.premier.main.MainActivity_MembersInjector
+biz/filmeroo/premier/app/AppModule_ProvidePicassoFactory.java
+ biz.filmeroo.premier.app.AppModule_ProvidePicassoFactory
+biz/filmeroo/premier/main/SearchPresenter_Factory.java
+ biz.filmeroo.premier.main.SearchPresenter_Factory
+biz/filmeroo/premier/main/FilmAdapter_Factory.java
+ biz.filmeroo.premier.main.FilmAdapter_Factory
+biz/filmeroo/premier/main/FilmPresenter_Factory.java
+ biz.filmeroo.premier.main.FilmPresenter_Factory
+biz/filmeroo/premier/app/DaggerAppComponent.java
+ biz.filmeroo.premier.app.DaggerAppComponent
+ biz.filmeroo.premier.app.DaggerAppComponent$1
+ biz.filmeroo.premier.app.DaggerAppComponent$2
+ biz.filmeroo.premier.app.DaggerAppComponent$3
+ biz.filmeroo.premier.app.DaggerAppComponent$Builder
+ biz.filmeroo.premier.app.DaggerAppComponent$DetailActivitySubcomponentFactory
+ biz.filmeroo.premier.app.DaggerAppComponent$DetailActivitySubcomponentImpl
+ biz.filmeroo.premier.app.DaggerAppComponent$MainActivitySubcomponentFactory
+ biz.filmeroo.premier.app.DaggerAppComponent$MainActivitySubcomponentImpl
+ biz.filmeroo.premier.app.DaggerAppComponent$SearchActivitySubcomponentFactory
+ biz.filmeroo.premier.app.DaggerAppComponent$SearchActivitySubcomponentImpl
+biz/filmeroo/premier/app/Binder_DetailActivity$app_debug.java
+ biz.filmeroo.premier.app.Binder_DetailActivity$app_debug
+ biz.filmeroo.premier.app.Binder_DetailActivity$app_debug$DetailActivitySubcomponent
+ biz.filmeroo.premier.app.Binder_DetailActivity$app_debug$DetailActivitySubcomponent$Factory
