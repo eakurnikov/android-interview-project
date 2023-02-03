@@ -15,4 +15,9 @@ internal class FilmRepository @Inject constructor(private val filmService: FilmS
     fun fetchMovie(id: Long): Single<ApiFilm>{
         return filmService.movie(id)
     }
+
+    fun search(query: String): Single<List<ApiFilm>> {
+        return filmService.search(query)
+                .map { it.results }
+    }
 }

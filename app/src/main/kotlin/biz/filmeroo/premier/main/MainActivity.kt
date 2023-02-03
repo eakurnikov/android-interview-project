@@ -1,16 +1,21 @@
 package biz.filmeroo.premier.main
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
+import android.text.InputType
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import biz.filmeroo.premier.R
 import biz.filmeroo.premier.api.ApiFilm
 import biz.filmeroo.premier.detail.DetailActivity
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main.recycler
+import kotlinx.android.synthetic.main.activity_search.*
+import kotlinx.android.synthetic.main.search_view.*
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(), FilmPresenter.View {
@@ -35,6 +40,11 @@ class MainActivity : AppCompatActivity(), FilmPresenter.View {
         }
         recycler.addItemDecoration(dividerItemDecoration)
         adapter.setOnClick { id -> DetailActivity.start(this, id) }
+        search_field.inputType = InputType.TYPE_NULL
+
+        search_field.setOnClickListener {
+            startActivity(Intent(this, SearchActivity::class.java))
+        }
     }
 
     override fun onDestroy() {

@@ -15,8 +15,9 @@ import jp.wasabeef.picasso.transformations.RoundedCornersTransformation
 import kotlinx.android.synthetic.main.item_film.view.*
 import javax.inject.Inject
 
-internal class FilmAdapter @Inject constructor(private val picasso: Picasso) :
-    ListAdapter<ApiFilm, FilmAdapter.Holder>(diffCallback) {
+internal class FilmAdapter @Inject constructor(
+    private val picasso: Picasso
+) : ListAdapter<ApiFilm, FilmAdapter.Holder>(diffCallback) {
 
     init {
         setHasStableIds(true)
@@ -40,11 +41,13 @@ internal class FilmAdapter @Inject constructor(private val picasso: Picasso) :
             itemView.title.text = item.title
             itemView.overview.text = item.overview
             itemView.rating.text = item.voteAverage
-            val cornerRadius = itemView.resources.getDimensionPixelSize(R.dimen.image_corner_radius)
-            picasso
-                .load(FilmService.buildImageUrl(item.posterPath))
-                .transform(RoundedCornersTransformation(cornerRadius, 0))
-                .into(itemView.image)
+            item.posterPath?.let {
+                val cornerRadius = itemView.resources.getDimensionPixelSize(R.dimen.image_corner_radius)
+                picasso
+                    .load(FilmService.buildImageUrl(it))
+                    .transform(RoundedCornersTransformation(cornerRadius, 0))
+                    .into(itemView.image)
+            }
             itemView.setOnClickListener { onClick?.invoke(item.id) }
         }
     }

@@ -6,7 +6,7 @@ import io.reactivex.disposables.Disposable
 
 interface PresenterView
 
-open class Presenter<in V : PresenterView> {
+open class Presenter<V : PresenterView> {
 
     private val disposables = CompositeDisposable()
     private var view: V? = null
@@ -14,6 +14,10 @@ open class Presenter<in V : PresenterView> {
     @CallSuper
     open fun start(view: V) {
         this.view = view
+    }
+
+    fun getView(): V? {
+        return view
     }
 
     @CallSuper

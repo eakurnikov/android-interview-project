@@ -43,4 +43,15 @@ class FilmRepositoryTest {
         verify(service).movie(2)
         assertThat(result.values()[0]).isEqualTo(movie)
     }
+
+    @Test
+    fun `searches films and returns results list single`() {
+        val query = "shawshank redemption"
+        whenever(service.search(query)).thenReturn(Single.just(Fixtures.filmResponse()))
+
+        repository.search(query)
+
+        verify(service).search(query)
+    }
+
 }

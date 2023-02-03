@@ -27,6 +27,8 @@
         android:name=".detail.DetailActivity"
         android:label="@string/top_movies"/>
 
+    <activity android:name=".main.SearchActivity" />
+
   </application>
 
 </manifest>

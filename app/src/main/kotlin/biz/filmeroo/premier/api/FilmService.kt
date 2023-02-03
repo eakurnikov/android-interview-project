@@ -3,6 +3,7 @@ package biz.filmeroo.premier.api
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface FilmService {
 
@@ -11,6 +12,9 @@ interface FilmService {
 
     @GET("movie/{movie_id}")
     fun movie(@Path("movie_id") movieId: Long): Single<ApiFilm>
+
+    @GET("search/movie")
+    fun search(@Query("query") query: String): Single<ApiFilmListResponse>
 
     companion object {
         const val BASE_URL = "https://api.themoviedb.org/3/"

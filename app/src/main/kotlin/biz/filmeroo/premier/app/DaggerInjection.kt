@@ -6,6 +6,7 @@ import biz.filmeroo.premier.R
 import biz.filmeroo.premier.api.FilmService
 import biz.filmeroo.premier.detail.DetailActivity
 import biz.filmeroo.premier.main.MainActivity
+import biz.filmeroo.premier.main.SearchActivity
 import com.google.gson.Gson
 import com.squareup.picasso.Picasso
 import dagger.Component
@@ -85,4 +86,7 @@ internal abstract class Binder {
 
     @ContributesAndroidInjector
     internal abstract fun detailActivity(): DetailActivity
+
+    @ContributesAndroidInjector
+    abstract fun searchActivity(): SearchActivity
 }
